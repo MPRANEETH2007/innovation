@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Student Innovation Hub - A platform for student creativity, technology and innovation.">
+<title>Student Innovation Hub | AL AMEER.M</title>
+
+<style>
+
+/* ================= GLOBAL STYLING ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary: #101b49;
+    --secondary: #192c68;
+    --accent: #32d6c4;
+    --light: #f4f8ff;
+    --white: #ffffff;
+    --text: #35415c;
+    --muted: #718096;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--primary);
+    font-size: 34px;
+}
+
+.section-label {
+    text-align: center;
+    color: #008f88;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    color: var(--muted);
+}
+
+/* ================= HEADER ================= */
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.logo {
+    color: var(--accent);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: white;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 9px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: white;
+
+    background:
+    linear-gradient(90deg,
+    rgba(10,20,65,0.94),
+    rgba(35,55,110,0.70)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(50,214,196,0.15);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 9px 18px;
+    border-radius: 30px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 17px;
+    max-width: 650px;
+    line-height: 1.9;
+    color: #e0e8ff;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 14px 27px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid white;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--primary);
+}
+
+/* ================= HIGHLIGHT STRIP ================= */
+
+.highlights {
+    background: var(--primary);
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    text-align: center;
+}
+
+.highlight-item h2 {
+    color: var(--accent);
+    font-size: 28px;
+}
+
+.highlight-item p {
+    color: white;
+    font-size: 14px;
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about {
+    padding: 85px 8%;
+    background: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    margin-top: 35px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.about-text h3 {
+    color: var(--primary);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: var(--muted);
+}
+
+.about-points {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.about-points li {
+    margin: 12px 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* ================= PROJECT SECTION ================= */
+
+.projects {
+    padding: 85px 8%;
+    background: #edf4ff;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.project-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 23px;
+}
+
+.project-info h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.project-info p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.project-category {
+    display: inline-block;
+    margin-top: 17px;
+    background: #e2faf7;
+    color: #008f88;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ================= MISSION SECTION ================= */
+
+.mission {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 75px 10%;
+}
+
+.mission h2 {
+    font-size: 33px;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.mission p {
+    max-width: 750px;
+    margin: auto;
+    color: #dce5ff;
+}
+
+/* ================= FOUNDER SECTION ================= */
+
+.founder-section {
+    padding: 85px 8%;
+    background: white;
+    text-align: center;
+}
+
+.founder-card {
+    max-width: 400px;
+    margin: 35px auto 0;
+    padding: 40px 30px;
+    border-radius: 18px;
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--accent);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.founder-card:hover {
+    transform: translateY(-7px);
+}
+
+.founder-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.founder-card h3 {
+    font-size: 28px;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.founder-card h4 {
+    margin-bottom: 15px;
+}
+
+.founder-card p {
+    color: #dce5ff;
+    margin-bottom: 10px;
+}
+
+/* ================= IDEA SUBMISSION SECTION ================= */
+
+.idea-section {
+    background: #edf4ff;
+    padding: 85px 6%;
+}
+
+.idea-form {
+    max-width: 800px;
+    margin: 35px auto 0;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.09);
+}
+
+.form-heading {
+    background: var(--primary);
+    color: white;
+    padding: 17px 20px;
+    margin: 30px 0 20px;
+    border-radius: 9px;
+    font-size: 19px;
+}
+
+.form-heading:first-child {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 7px;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d4dbea;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    background: #fbfcff;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #18bbaa;
+    box-shadow: 0 0 0 3px rgba(50,214,196,0.15);
+    background: white;
+}
+
+.form-group textarea {
+    height: 125px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.required {
+    color: red;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 30px;
+    background: var(--primary);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: #008f88;
+    transform: translateY(-2px);
+}
+
+.privacy-note {
+    margin-top: 20px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.7;
+    background: #f5f8ff;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact {
+    background: white;
+    text-align: center;
+    padding: 70px 8%;
+}
+
+.contact h2 {
+    color: var(--primary);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #091333;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: var(--accent);
+    margin-bottom: 12px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+footer span {
+    color: var(--accent);
+}
+
+.footer-line {
+    height: 1px;
+    background: #34416a;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media(max-width: 900px) {
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .btn-outline {
+        margin: 15px 0 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 420px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .idea-form {
+        padding: 23px 18px;
+    }
+
+    .highlights {
+        gap: 25px;
+    }
+
+}
+
+@media(max-width: 400px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 33px;
+    }
+
+    .hero {
+        padding: 45px 6%;
+    }
+
+    .form-heading {
+        font-size: 16px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        🚀 INNOVATION <span>HUB</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#mission">Mission</a>
+        <a href="#founder">Founder</a>
+        <a href="#ideas">Share Idea</a>
+    </nav>
+
+</header>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            WELCOME TO OUR STUDENT COMMUNITY
+        </span>
+
+        <h1>
+            Think. <span>Create.</span><br>
+            Innovate.
+        </h1>
+
+        <p>
+            Welcome to Student Innovation Hub, a creative
+            platform where young minds explore technology,
+            develop innovative projects and transform
+            powerful ideas into meaningful solutions.
+        </p>
+
+        <a href="#projects" class="btn">
+            Explore Projects →
+        </a>
+
+        <a href="#ideas" class="btn-outline">
+            Submit Your Idea
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HIGHLIGHTS ================= -->
+
+<div class="highlights">
+
+    <div class="highlight-item">
+        <h2>💡</h2>
+        <p>Creative Ideas</p>
+    </div>
+
+    <div class="highlight-item">
+        <h2>🚀</h2>
+        <p>Future Innovation</p>
+    </div>
+
+    <div class="highlight-item">
+        <h2>🤝</h2>
+        <p>Student Community</p>
+    </div>
+
+    <div class="highlight-item">
+        <h2>🌍</h2>
+        <p>Real World Impact</p>
+    </div>
+
+</div>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+
+<section class="about" id="about">
+
+    <p class="section-label">WHO WE ARE</p>
+
+    <h2 class="section-title">
+        About Innovation Hub
+    </h2>
+
+    <p class="section-description">
+        A place where imagination meets technology
+        and students become creators of tomorrow.
+    </p>
+
+    <div class="about-content">
+
+        <div class="about-image">
+
+            <img
+            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=900"
+            alt="Students collaborating on innovative ideas">
+
+        </div>
+
+        <div class="about-text">
+
+            <h3>Ideas Start Here!</h3>
+
+            <p>
+                Student Innovation Hub is a creative platform
+                built for students, by students. It brings
+                together curious minds who are interested
+                in technology, creativity and problem-solving.
+            </p>
+
+            <p>
+                Our platform encourages students to share
+                their innovative ideas, discover new
+                opportunities and develop projects that
+                can create positive changes in society.
+            </p>
+
+            <ul class="about-points">
+
+                <li>✔ Encourage Student Creativity</li>
+
+                <li>✔ Promote Technology and Innovation</li>
+
+                <li>✔ Support New Project Ideas</li>
+
+                <li>✔ Build a Better Future Together</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS SECTION ================= -->
+
+<section class="projects" id="projects">
+
+    <p class="section-label">MADE WITH CREATIVITY</p>
+
+    <h2 class="section-title">
+        Explore Student Projects
+    </h2>
+
+    <p class="section-description">
+        Small ideas today. Big innovations tomorrow!
+        Explore some exciting areas of student innovation.
+    </p>
+
+    <div class="project-container">
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=700"
+            alt="Smart Robot">
+
+            <div class="project-info">
+
+                <h3>Smart Robot</h3>
+
+                <p>
+                    A robotics concept designed to perform
+                    simple automated tasks using modern
+                    technology and intelligent systems.
+                </p>
+
+                <span class="project-category">
+                    🤖 ROBOTICS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700"
+            alt="Smart Home">
+
+            <div class="project-info">
+
+                <h3>Smart Home</h3>
+
+                <p>
+                    An innovative home automation concept
+                    that uses electronic devices to make
+                    everyday activities easier.
+                </p>
+
+                <span class="project-category">
+                    ⚡ ELECTRONICS
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+            <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700"
+            alt="AI Assistant">
+
+            <div class="project-info">
+
+                <h3>AI Assistant</h3>
+
+                <p>
+                    An artificial intelligence concept
+                    designed to assist people with
+                    everyday activities and tasks.
+                </p>
+
+                <span class="project-category">
+                    💡 ARTIFICIAL INTELLIGENCE
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MISSION SECTION ================= -->
+
+<section class="mission" id="mission">
+
+    <h2>Our Mission & Vision</h2>
+
+    <p>
+        Our mission is to create an environment where every
+        student gets an opportunity to express their ideas,
+        explore new technologies and develop creative
+        solutions. We believe that every great innovation
+        begins with a simple idea.
+        Together, let's create something meaningful
+        for the future!
+    </p>
+
+</section>
+
+
+<!-- ================= FOUNDER SECTION ================= -->
+
+<section class="founder-section" id="founder">
+
+    <p class="section-label">
+        THE PERSON BEHIND THE VISION
+    </p>
+
+    <h2 class="section-title">
+        Meet Our Founder
+    </h2>
+
+    <p class="section-description">
+        The vision behind Student Innovation Hub.
+    </p>
+
+    <div class="founder-card">
+
+        <div class="founder-icon">
+            👑
+        </div>
+
+        <h3>PRANEETH</h3>
+
+        <h4>Founder & Creator</h4>
+
+        <p>Student Innovation Hub</p>
+
+        <p>
+            Dream Big. Think Creative.
+            Build the Future.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STUDENT IDEA FORM ================= -->
+
+<section class="idea-section" id="ideas">
+
+    <p class="section-label">
+        YOUR IDEA MATTERS
+    </p>
+
+    <h2 class="section-title">
+        Share Your Innovation With Us!
+    </h2>
+
+    <p class="section-description">
+        Are you a student with a creative idea?
+        Register your details and tell us about
+        your innovative project.
+    </p>
+
+
+    <form class="idea-form" action="#" method="post">
+
+        <!-- STUDENT INFORMATION -->
+
+        <h3 class="form-heading">
+            👤 Student Personal Information
+        </h3>
+
+        <div class="form-group">
+
+            <label>
+                Student Full Name <span class="required">*</span>
+            </label>
+
+            <input
+            type="text"
+            name="student_name"
+            placeholder="Enter your full name"
+            required>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Email Address <span class="required">*</span>
+            </label>
+
+            <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>
+                    Mobile Number <span class="required">*</span>
+                </label>
+
+                <input
+                type="tel"
+                name="mobile"
+                placeholder="10-digit mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                inputmode="numeric"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Alternate Mobile Number
+                </label>
+
+                <input
+                type="tel"
+                name="alternate_mobile"
+                placeholder="Alternate mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                inputmode="numeric">
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>
+                    State <span class="required">*</span>
+                </label>
+
+                <input
+                type="text"
+                name="state"
+                placeholder="Enter your state"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    PIN Code <span class="required">*</span>
+                </label>
+
+                <input
+                type="text"
+                name="pincode"
+                type="text"
+            name="pincode"
+            placeholder="Enter 6-digit PIN code"
+            pattern="[0-9]{6}"
+            minlength="6"
+            maxlength="6"
+            inputmode="numeric"
+            required>
+    </div>
+
+</div>
+<html>
